@@ -2,7 +2,7 @@
 name: deeprea
 description: Investigate shipped applications, binaries, packages or recorded runtime evidence with REA; recover evidence-backed behavior and guide a reconstruction. Use for reverse engineering, feature traces, uncertain decompilation, multi-part investigations and original-versus-rebuild checks. Skip ordinary architecture analysis when complete source already answers the question.
 metadata:
-  version: "0.2.1-experimental"
+  version: "0.2.1"
   upstream-rea-skill: "42"
 ---
 

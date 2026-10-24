@@ -1,8 +1,8 @@
 {
   "checked_utc": "2026-10-24T06:02:39.190268+00:00",
-  "version": "0.2.1-experimental",
+  "version": "0.2.1",
   "skill_files": 18,
-  "skill_matches_evaluated_snapshot": true,
+  "skill_matches_evaluated_snapshot": false,
   "anthropic_quick_validate": "PASS",
   "recorded_grades_recomputed": "PASS",
   "qc_subprocess_tests": {
@@ -20,7 +20,8 @@
     "status": "PASS",
     "method": "Codex bundled skill installer, git method, isolated non-active destination",
     "installed_files_matching_evaluated_hashes": 18,
-    "host_activation": "NOT RUN; not installed in active discovery"
+    "host_activation": "NOT RUN; not installed in active discovery",
+    "note": "Executed on the prior label; current tagged release installation is checked separately."
   },
   "unrun": [
     "New agent investigations",
@@ -29,5 +30,6 @@
     "Cross-host/platform behavior",
     "Host-enforced containment"
   ],
-  "relative_document_links": "PASS"
+  "relative_document_links": "PASS",
+  "release_label_change": "Only SKILL.md metadata.version changed from 0.2.1-experimental to 0.2.1; instruction body and other 17 files unchanged."
 }

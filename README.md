@@ -1,15 +1,17 @@
-# DeepREA 0.2.1 Experimental
+# Skills
+
+## DeepREA 0.2.1
 
 Evidence-led reverse engineering and reconstruction for coding agents. DeepREA bundles REA's specialist guidance and adds procedures for bounded investigation, evidence reuse, agent handoffs, runtime compatibility and executable checks.
 
-This is an independent experimental adaptation, not an official REA release. It works without Cerebellum. Installing the skill supplies instructions; it does not install REA, analysis engines, Python or a sandbox.
+This is an independent adaptation, not an official REA release. It works without Cerebellum. Installing the skill supplies instructions; it does not install REA, analysis engines, Python or a sandbox.
 
 ## Install in Codex
 
 Ask Codex's skill installer to install the `deeprea` directory from this repository. Review the files first and keep any existing installation recoverable. With the bundled installer script available, its supported arguments are:
 
 ```text
-python /path/to/skill-installer/scripts/install-skill-from-github.py --repo NotLooshi/DeepREA --path deeprea --ref v0.2.1-experimental
+python /path/to/skill-installer/scripts/install-skill-from-github.py --repo NotLooshi/skills --path deeprea --ref v0.2.1
 ```
 
 The default destination is `$CODEX_HOME/skills/deeprea`, normally `~/.codex/skills/deeprea`. The installer refuses an existing destination. Follow the installed host's reload/discovery instructions, then explicitly invoke:
@@ -55,6 +57,8 @@ The first command verifies the packaged skill hashes and recomputes the publishe
 
 ## Status and rollback
 
-Experimental, opt-in release. Natural activation/non-activation, every specialist branch, non-Windows native behavior and generalization to a new application have not been established for this exact version. No automatic tool installation, instruction enforcement or guaranteed containment is promised.
+Regular, opt-in release. Natural activation/non-activation, every specialist branch, non-Windows native behavior and generalization to a new application have not been established for this exact version. No automatic tool installation, instruction enforcement or guaranteed containment is promised.
 
 Keep your previous skill available outside active discovery. To roll back, remove this candidate from active discovery and restore the prior skill through your host's supported installation mechanism. Do not leave two conflicting `deeprea` versions active. Publication does not install or activate the skill on the author's machine.
+
+Version 0.2.1 removes the experimental label. Relative to the evaluated snapshot, only the skill version metadata changed; the instruction body and other 17 package files are identical. This release-label change does not expand the measured performance claims.
