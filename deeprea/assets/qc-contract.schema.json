@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeepREA finite JSON-lines QC contract v1",
+  "$comment": "qc.py implements strict field/type/range checks without a JSON Schema dependency. It additionally rejects duplicate case IDs, duplicate JSON keys, NUL command/path characters and non-UTF-8 stdin. Structural validity does not establish adequate coverage or safe command authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "objective", "scope", "comparison", "timeout_seconds", "original", "candidate", "cases"],
+  "properties": {
+    "version": {"const": 1},
+    "objective": {"type": "string", "pattern": "\\S"},
+    "scope": {"type": "string", "pattern": "\\S"},
+    "comparison": {"const": "jsonl-bytes"},
+    "timeout_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 60},
+    "original": {"$ref": "#/$defs/program"},
+    "candidate": {"$ref": "#/$defs/program"},
+    "cases": {
+      "type": "array", "minItems": 1, "maxItems": 256,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "stdin", "responses"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"},
+          "stdin": {"type": "string"},
+          "responses": {"type": "integer", "minimum": 0, "maximum": 10000}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "program": {
+      "type": "object", "additionalProperties": false,
+      "required": ["argv", "files"],
+      "properties": {
+        "argv": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "\\S"}},
+        "files": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "\\S"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "checked_utc": "2026-10-24T06:02:39.190268+00:00",
+  "version": "0.2.1-experimental",
+  "skill_files": 18,
+  "skill_matches_evaluated_snapshot": true,
+  "anthropic_quick_validate": "PASS",
+  "recorded_grades_recomputed": "PASS",
+  "qc_subprocess_tests": {
+    "passed": 17,
+    "failed": 0,
+    "seconds": 63.907
+  },
+  "credential_and_personal_path_pattern_scan": "no matches",
+  "course_verbatim_scan": {
+    "window_words": 18,
+    "matching_windows": 0,
+    "limitation": "Not proof of rights clearance or absence of paraphrase."
+  },
+  "installation_smoke": "PENDING",
+  "unrun": [
+    "New agent investigations",
+    "Natural activation and non-activation sweep for this revision",
+    "All specialist cases",
+    "Cross-host/platform behavior",
+    "Host-enforced containment"
+  ]
+}

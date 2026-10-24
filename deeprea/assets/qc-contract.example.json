@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "objective": "Compare the supplied original and rebuilt command-line behavior",
+  "scope": "One explicit empty-input response; extend from independent target evidence before relying on this example",
+  "comparison": "jsonl-bytes",
+  "timeout_seconds": 5,
+  "original": {"argv": ["node", "original.cjs"], "files": ["original.cjs"]},
+  "candidate": {"argv": ["node", "reconstruction.cjs"], "files": ["reconstruction.cjs"]},
+  "cases": [{"id": "empty", "stdin": "{}\n", "responses": 1}]
+}

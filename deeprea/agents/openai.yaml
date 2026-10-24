@@ -1,0 +1,4 @@
+interface:
+  display_name: "DeepREA"
+  short_description: "Evidence-led reverse engineering and reconstruction"
+  default_prompt: "Use $deeprea to investigate the supplied application and verify the requested behavior."

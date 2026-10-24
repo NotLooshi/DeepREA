@@ -1,0 +1,2499 @@
+{
+  "original_56": [
+    {
+      "id": "scalar-basic",
+      "family": "scalar",
+      "argv": [
+        "pass=true",
+        "type=text"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"pass\":true,\"type\":\"text\"}\n",
+      "expected": {
+        "stdout_b64": "eyJwYXNzIjp0cnVlLCJ0eXBlIjoidGV4dCJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "scalar-numeric",
+      "family": "scalar",
+      "argv": [
+        "a=001",
+        "b=1e3",
+        "c=-0",
+        "d=0x10",
+        "e=1.25"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjoxLCJiIjoxMDAwLCJjIjotMCwiZCI6IjB4MTAiLCJlIjoxLjI1fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "scalar-boolean",
+      "family": "scalar",
+      "argv": [
+        "a=true",
+        "b=false",
+        "c=null",
+        "d=True",
+        "e=FALSE"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjp0cnVlLCJiIjpmYWxzZSwiYyI6bnVsbCwiZCI6IlRydWUiLCJlIjoiRkFMU0UifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "scalar-empty",
+      "family": "scalar",
+      "argv": [
+        "a=",
+        "b=plain",
+        "c= "
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjpudWxsLCJiIjoicGxhaW4iLCJjIjoiICJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "scalar-equals",
+      "family": "scalar",
+      "argv": [
+        "form==ok",
+        "this===sure"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"form\":\"=ok\",\"this\":\"==sure\"}\n",
+      "expected": {
+        "stdout_b64": "eyJmb3JtIjoiPW9rIiwidGhpcyI6Ij09c3VyZSJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "scalar-inline",
+      "family": "scalar",
+      "argv": [
+        "obj={\"x\":1}",
+        "arr=[true,null]",
+        "bad={oops"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJvYmoiOnsieCI6MX0sImFyciI6W3RydWUsbnVsbF0sImJhZCI6Intvb3BzIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "scalar-quoted",
+      "family": "scalar",
+      "argv": [
+        "msg=\"hello\"",
+        "key=back\\slash",
+        "tab=a\tb"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJtc2ciOiJcImhlbGxvXCIiLCJrZXkiOiJiYWNrXFxzbGFzaCIsInRhYiI6ImFcdGIifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-mixed",
+      "family": "array",
+      "argv": [
+        "-a",
+        "true",
+        "false",
+        "null",
+        "1",
+        "word"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "W3RydWUsZmFsc2UsbnVsbCwxLCJ3b3JkIl0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-pretty",
+      "family": "array",
+      "argv": [
+        "-a",
+        "-p",
+        "1",
+        "{\"a\":2}",
+        "[3,4]"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "Ww0KICAgMSwNCiAgIHsNCiAgICAgICJhIjogMg0KICAgfSwNCiAgIFsNCiAgICAgIDMsDQogICAgICA0DQogICBdDQpdDQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-empty",
+      "family": "array",
+      "argv": [
+        "-a"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "W10NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-stdin",
+      "family": "array",
+      "argv": [
+        "-a"
+      ],
+      "stdin": "spring\nsummer\nautumn\nwinter\n",
+      "files": {},
+      "outputs": [],
+      "literal": "[\"spring\",\"summer\",\"autumn\",\"winter\"]\n",
+      "expected": {
+        "stdout_b64": "WyJzcHJpbmciLCJzdW1tZXIiLCJhdXR1bW4iLCJ3aW50ZXIiXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-blankline",
+      "family": "array",
+      "argv": [
+        "-a"
+      ],
+      "stdin": "one\n\ntwo\n",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "WyJvbmUiXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-literalflags",
+      "family": "array",
+      "argv": [
+        "-a",
+        "--",
+        "--test",
+        "--toast"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "WyItLXRlc3QiLCItLXRvYXN0Il0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-nobool",
+      "family": "array",
+      "argv": [
+        "-a",
+        "-B",
+        "true",
+        "false",
+        "null",
+        "2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "WyJ0cnVlIiwiZmFsc2UiLCJudWxsIiwyXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-string",
+      "family": "coerce",
+      "argv": [
+        "--",
+        "-s",
+        "a=123",
+        "b=123",
+        "-s",
+        "c=true"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjoiMTIzIiwiYiI6MTIzLCJjIjoidHJ1ZSJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-number",
+      "family": "coerce",
+      "argv": [
+        "--",
+        "-n",
+        "a=hello",
+        "-n",
+        "b=true",
+        "-n",
+        "c=false",
+        "-n",
+        "d="
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjo1LCJiIjoxLCJjIjowLCJkIjowfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-bool",
+      "family": "coerce",
+      "argv": [
+        "--",
+        "-b",
+        "a=0",
+        "-b",
+        "b=2",
+        "-b",
+        "c=word",
+        "-b",
+        "d="
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjpmYWxzZSwiYiI6dHJ1ZSwiYyI6dHJ1ZSwiZCI6ZmFsc2V9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-array",
+      "family": "coerce",
+      "argv": [
+        "-a",
+        "--",
+        "-s",
+        "123",
+        "-n",
+        "This is a test",
+        "-b",
+        "C_Rocks",
+        "456"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "WyIxMjMiLDE0LHRydWUsNDU2XQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-flagvalues",
+      "family": "coerce",
+      "argv": [
+        "-a",
+        "--",
+        "-s",
+        "-s",
+        "-n",
+        "-n",
+        "-b",
+        "-b"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "WyItcyIsMix0cnVlXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-atbooleans",
+      "family": "coerce",
+      "argv": [
+        "a@true",
+        "b@false",
+        "c@2",
+        "d@yes",
+        "e@",
+        "f@TRUE"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjp0cnVlLCJiIjpmYWxzZSwiYyI6dHJ1ZSwiZCI6ZmFsc2UsImUiOm51bGwsImYiOnRydWV9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "coerce-skipnull",
+      "family": "coerce",
+      "argv": [
+        "-n",
+        "a=",
+        "b=null",
+        "c=1",
+        "list[]=",
+        "list[]=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJiIjpudWxsLCJjIjoxLCJsaXN0IjpbMl19DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-brackets",
+      "family": "nested",
+      "argv": [
+        "a[]=1",
+        "a[]=2",
+        "geo[lat]=111",
+        "geo[lon]=222"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjpbMSwyXSwiZ2VvIjp7ImxhdCI6MTExLCJsb24iOjIyMn19DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-dots",
+      "family": "nested",
+      "argv": [
+        "-d",
+        ".",
+        "a.b=1",
+        "a.c.d=2",
+        "a.c.e[]=3",
+        "a.c.e[]=4"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjp7ImIiOjEsImMiOnsiZCI6MiwiZSI6WzMsNF19fX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-literal_dots",
+      "family": "nested",
+      "argv": [
+        "a.b=1",
+        "a.c=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhLmIiOjEsImEuYyI6Mn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-delimiter",
+      "family": "nested",
+      "argv": [
+        "-d",
+        "|suffix",
+        "a|b=1",
+        "a|c=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjp7ImIiOjEsImMiOjJ9fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-mixed",
+      "family": "nested",
+      "argv": [
+        "-d",
+        ".",
+        "top.obj={\"x\":1}",
+        "top.obj.y=2",
+        "items[]=true"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJ0b3AiOnsib2JqIjp7IngiOjEsInkiOjJ9fSwiaXRlbXMiOlt0cnVlXX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-pretty",
+      "family": "nested",
+      "argv": [
+        "-p",
+        "a[x]=1",
+        "a[y]=2",
+        "list[]=x",
+        "list[]=y"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "ew0KICAgImEiOiB7DQogICAgICAieCI6IDEsDQogICAgICAieSI6IDINCiAgIH0sDQogICAibGlzdCI6IFsNCiAgICAgICJ4IiwNCiAgICAgICJ5Ig0KICAgXQ0KfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-trailing_bracket",
+      "family": "nested",
+      "argv": [
+        "list[]suffix=1",
+        "list[]=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJsaXN0IjpbMSwyXX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-duplicates",
+      "family": "state",
+      "argv": [
+        "a=1",
+        "b=2",
+        "a=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"a\":1,\"b\":2,\"a\":3}\n",
+      "expected": {
+        "stdout_b64": "eyJhIjoxLCJiIjoyLCJhIjozfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-dedup",
+      "family": "state",
+      "argv": [
+        "-D",
+        "a=1",
+        "b=2",
+        "a=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"a\":3,\"b\":2}\n",
+      "expected": {
+        "stdout_b64": "eyJhIjozLCJiIjoyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-nested_dedup",
+      "family": "state",
+      "argv": [
+        "-D",
+        "box[x]=1",
+        "box[y]=2",
+        "box[x]=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJib3giOnsieCI6MywieSI6Mn19DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-stdin_object",
+      "family": "state",
+      "argv": [],
+      "stdin": "a=1\nb=true\nc=hello world\n",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjoxLCJiIjp0cnVlLCJjIjoiaGVsbG8gd29ybGQifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-empty",
+      "family": "state",
+      "argv": [],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{}\n",
+      "expected": {
+        "stdout_b64": "e30NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-empty_e",
+      "family": "state",
+      "argv": [
+        "-e"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "",
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "state-utf8_stdin",
+      "family": "state",
+      "argv": [],
+      "stdin": "name=caf\u00e9\ncity=\u6771\u4eac\n",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJuYW1lIjoiY2Fmw6kiLCJjaXR5Ijoi5p2x5LqsIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-text",
+      "family": "files",
+      "argv": [
+        "text=@text.txt"
+      ],
+      "stdin": "",
+      "files": {
+        "text.txt": "first\nsecond\n"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJ0ZXh0IjoiZmlyc3RcbnNlY29uZCJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-base64",
+      "family": "files",
+      "argv": [
+        "blob=%blob.dat"
+      ],
+      "stdin": "",
+      "files": {
+        "blob.dat": "abcXYZ012\n"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJibG9iIjoiWVdKaldGbGFNREV5Q2c9PSJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-json_colon",
+      "family": "files",
+      "argv": [
+        "doc=:doc.json"
+      ],
+      "stdin": "",
+      "files": {
+        "doc.json": "{\"b\":2,\"a\":1}\n"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJkb2MiOnsiYiI6MiwiYSI6MX19DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-json_assignment",
+      "family": "files",
+      "argv": [
+        "doc:=doc.json"
+      ],
+      "stdin": "",
+      "files": {
+        "doc.json": "[1,true,{\"k\":\"v\"}]\n"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJkb2MiOlsxLHRydWUseyJrIjoidiJ9XX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-stdin_json",
+      "family": "files",
+      "argv": [
+        "doc:=-"
+      ],
+      "stdin": "[\"hello world\"]\n",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJkb2MiOlsiaGVsbG8gd29ybGQiXX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-escaped",
+      "family": "files",
+      "argv": [
+        "key=\\@timestamp"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"key\":\"@timestamp\"}\n",
+      "expected": {
+        "stdout_b64": "eyJrZXkiOiJAdGltZXN0YW1wIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "files-output",
+      "family": "files",
+      "argv": [
+        "-p",
+        "-o",
+        "result.json",
+        "a=1",
+        "b[]=2",
+        "b[]=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [
+        "result.json"
+      ],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {
+          "result.json": "ew0KICAgImEiOiAxLA0KICAgImIiOiBbDQogICAgICAyLA0KICAgICAgMw0KICAgXQ0KfQ0K"
+        }
+      }
+    },
+    {
+      "id": "filter-object",
+      "family": "filter",
+      "argv": [
+        "-f",
+        "in.json",
+        "c=42"
+      ],
+      "stdin": "",
+      "files": {
+        "in.json": "{\"a\":1,\"b\":2}\n"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjoxLCJiIjoyLCJjIjo0Mn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "filter-array",
+      "family": "filter",
+      "argv": [
+        "-f",
+        "-",
+        "6",
+        "8"
+      ],
+      "stdin": "[1,2,3,4]\n",
+      "files": {},
+      "outputs": [],
+      "literal": "[1,2,3,4,6,8]\n",
+      "expected": {
+        "stdout_b64": "WzEsMiwzLDQsNiw4XQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "filter-stdin_changes",
+      "family": "filter",
+      "argv": [
+        "-f",
+        "in.json"
+      ],
+      "stdin": "c=42\nd=3\n",
+      "files": {
+        "in.json": "{\"a\":1,\"b\":2}"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjoxLCJiIjoyLCJjIjo0MiwiZCI6M30NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "filter-invalid_fallback",
+      "family": "filter",
+      "argv": [
+        "-f",
+        "in.json",
+        "a=1"
+      ],
+      "stdin": "",
+      "files": {
+        "in.json": "this is not JSON"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjoxfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "filter-dedup",
+      "family": "filter",
+      "argv": [
+        "-D",
+        "-f",
+        "in.json",
+        "a=3"
+      ],
+      "stdin": "",
+      "files": {
+        "in.json": "{\"a\":1,\"b\":2,\"a\":2}"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhIjozLCJiIjoyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "filter-pretty",
+      "family": "filter",
+      "argv": [
+        "-p",
+        "-f",
+        "-"
+      ],
+      "stdin": "{\"file\":\"stdin\",\"jo\":true}\n",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "ew0KICAgImZpbGUiOiAic3RkaW4iLA0KICAgImpvIjogdHJ1ZQ0KfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "filter-overwrite",
+      "family": "filter",
+      "argv": [
+        "-f",
+        "in.json",
+        "-o",
+        "in.json",
+        "new=2"
+      ],
+      "stdin": "",
+      "files": {
+        "in.json": "{\"old\":1}"
+      },
+      "outputs": [
+        "in.json"
+      ],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {
+          "in.json": "eyJvbGQiOjEsIm5ldyI6Mn0NCg=="
+        }
+      }
+    },
+    {
+      "id": "errors-bare",
+      "family": "errors",
+      "argv": [
+        "bad",
+        "good=1"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJnb29kIjoxfQ0K",
+        "stderr_b64": "QXJndW1lbnQgYGJhZCcgaXMgbmVpdGhlciBrPXYgbm9yIGtAdg0K",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "errors-bracket",
+      "family": "errors",
+      "argv": [
+        "a[broken=1",
+        "b=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "eyJhW2Jyb2tlbiI6MSwiYiI6Mn0NCg==",
+        "stderr_b64": "bWlzc2luZyBjbG9zaW5nIGJyYWNrZXQgb24gYVticm9rZW4NCg==",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "errors-array_object",
+      "family": "errors",
+      "argv": [
+        "b[]=1",
+        "b[a]=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IEpTT05fRVJSOiBDYW5ub3QgYWRkIHsiYSI6M30gdG8gbm9uLW9iamVjdCBbMV0NCg==",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "errors-object_array",
+      "family": "errors",
+      "argv": [
+        "d[m]=10",
+        "d[]=20"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IEpTT05fRVJSOiBDYW5ub3QgYXBwZW5kIDIwIHRvIG5vbi1hcnJheSB7Im0iOjEwfQ0K",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "errors-invalid_json",
+      "family": "errors",
+      "argv": [
+        "x=:bad.json"
+      ],
+      "stdin": "",
+      "files": {
+        "bad.json": "{broken"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IENhbm5vdCBkZWNvZGUgSlNPTiBpbiBmaWxlIGJhZC5qc29uDQo=",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "errors-scalar_filter",
+      "family": "errors",
+      "argv": [
+        "-f",
+        "in.json"
+      ],
+      "stdin": "",
+      "files": {
+        "in.json": "42"
+      },
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IElucHV0IEpTT04gbm90IGFuIGFycmF5IG9yIG9iamVjdDogNDINCg==",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "errors-missing_file",
+      "family": "errors",
+      "argv": [
+        "x=@missing.txt"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": null,
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "bWlzc2luZy50eHQ6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkNCmpvOiBDYW5ub3Qgb3BlbiBtaXNzaW5nLnR4dCBmb3IgcmVhZGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    }
+  ],
+  "known_review_46": [
+    {
+      "id": "wildcard-array",
+      "argv": [
+        "-a",
+        "*.txt"
+      ],
+      "stdin": "",
+      "files": {
+        "one.txt": "a",
+        "two.txt": "b"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJvbmUudHh0IiwidHdvLnR4dCJdDQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "wildcard-space",
+      "argv": [
+        "-a",
+        "a *.txt"
+      ],
+      "stdin": "",
+      "files": {
+        "a one.txt": "a"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJhICoudHh0Il0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "wildcard-bracket",
+      "argv": [
+        "-a",
+        "[a]*.txt"
+      ],
+      "stdin": "",
+      "files": {
+        "[a]one.txt": "a",
+        "ab.txt": "b"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJbYV1vbmUudHh0Il0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "wildcard-question",
+      "argv": [
+        "-a",
+        "?.txt"
+      ],
+      "stdin": "",
+      "files": {
+        "a.txt": "a",
+        "b.txt": "b"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJhLnR4dCIsImIudHh0Il0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-inline-file",
+      "argv": [
+        "x=@-"
+      ],
+      "stdin": "tail\nsecond\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoidGFpbFxuc2Vjb25kIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-shared-text",
+      "argv": [],
+      "stdin": "x=@-\nhello\nworld\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoiIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-shared-json",
+      "argv": [],
+      "stdin": "x=:-\n{\"a\":2}\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IENhbm5vdCBkZWNvZGUgSlNPTiBpbiBmaWxlIC0NCg==",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-shared-base64",
+      "argv": [],
+      "stdin": "x=%-\nhello\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoiIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-filter",
+      "argv": [
+        "-f",
+        "-",
+        "y=2"
+      ],
+      "stdin": "{\"x\":1}\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxLCJ5IjoyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-nul",
+      "argv": [],
+      "stdin": "x=ab\u0000cd\ny=2\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoiYWIiLCJ5IjoyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "unicode-text-path",
+      "argv": [
+        "x=@caf\u00e9.txt"
+      ],
+      "stdin": "",
+      "files": {
+        "caf\u00e9.txt": "hello"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "Y2Fmw6kudHh0OiBObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5DQpqbzogQ2Fubm90IG9wZW4gY2Fmw6kudHh0IGZvciByZWFkaW5nDQo=",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "unicode-json-path",
+      "argv": [
+        "x=:caf\u00e9.json"
+      ],
+      "stdin": "",
+      "files": {
+        "caf\u00e9.json": "{\"a\":1}"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "Y2Fmw6kuanNvbjogTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeQ0Kam86IENhbm5vdCBvcGVuIGNhZsOpLmpzb24gZm9yIHJlYWRpbmcNCg==",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "unicode-filter-path",
+      "argv": [
+        "-f",
+        "caf\u00e9.json"
+      ],
+      "stdin": "",
+      "files": {
+        "caf\u00e9.json": "{\"a\":1}"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJhIjoxfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "unicode-output-path",
+      "argv": [
+        "-o",
+        "caf\u00e9.json",
+        "x=1"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [
+        "caf\u00e9.json"
+      ],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {
+          "caf\u00e9.json": "eyJ4IjoxfQ0K"
+        }
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "empty-text-path",
+      "argv": [
+        "x=@"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "SW52YWxpZCBhcmd1bWVudA0Kam86IENhbm5vdCBvcGVuICBmb3IgcmVhZGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "empty-json-path",
+      "argv": [
+        "x=:"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "SW52YWxpZCBhcmd1bWVudA0Kam86IENhbm5vdCBvcGVuICBmb3IgcmVhZGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "empty-output-path",
+      "argv": [
+        "-o",
+        "",
+        "x=1"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "SW52YWxpZCBhcmd1bWVudA0Kam86IENhbm5vdCBvcGVuICBmb3Igd3JpdGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "empty-filter-path",
+      "argv": [
+        "-f",
+        ""
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "SW52YWxpZCBhcmd1bWVudA0Kam86IENhbm5vdCBvcGVuICBmb3IgcmVhZGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "directory-text-path",
+      "argv": [
+        "x=@."
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "LjogUGVybWlzc2lvbiBkZW5pZWQNCmpvOiBDYW5ub3Qgb3BlbiAuIGZvciByZWFkaW5nDQo=",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "directory-output-path",
+      "argv": [
+        "-o",
+        ".",
+        "x=1"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "LjogUGVybWlzc2lvbiBkZW5pZWQNCmpvOiBDYW5ub3Qgb3BlbiAuIGZvciB3cml0aW5nDQo=",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "file-missing-mixed-warning",
+      "argv": [
+        "bad",
+        "x=@missing.txt"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "bWlzc2luZy50eHQ6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkNCkFyZ3VtZW50IGBiYWQnIGlzIG5laXRoZXIgaz12IG5vciBrQHYNCmpvOiBDYW5ub3Qgb3BlbiBtaXNzaW5nLnR4dCBmb3IgcmVhZGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "json-control-del",
+      "argv": [
+        "x=\u001f",
+        "y=\u007f"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoiHyIsInkiOiJ/In0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "json-escaped-nul",
+      "argv": [
+        "x={\"a\":\"\\u0000\"}"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijoie1wiYVwiOlwiXFx1MDAwMFwifSJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "json-escaped-surrogate",
+      "argv": [
+        "x={\"a\":\"\\ud800\"}"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijoie1wiYVwiOlwiXFx1ZDgwMFwifSJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "json-overflow",
+      "argv": [
+        "x={\"a\":1e999}"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijp7ImEiOm51bGx9fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "json-duplicate-dedup",
+      "argv": [
+        "-D",
+        "x={\"a\":1,\"a\":2}"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijp7ImEiOjJ9fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "nested-empty-omit",
+      "argv": [
+        "-n",
+        "x[]=",
+        "y=1"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjpbXSwieSI6MX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "nested-delimiter-conflict",
+      "argv": [
+        "-d",
+        ".",
+        "a=1",
+        "a.b=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IEpTT05fRVJSOiBDYW5ub3QgYWRkIHsiYiI6Mn0gdG8gbm9uLW9iamVjdCAxDQo=",
+        "returncode": 1,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "nested-duplicate-reuse",
+      "argv": [
+        "a[x]=1",
+        "a[y]=2",
+        "-D",
+        "a[x]=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJhIjp7IngiOjMsInkiOjJ9fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-blank-break",
+      "argv": [],
+      "stdin": "x=1\n\ny=2\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "stdin-coercion",
+      "argv": [],
+      "stdin": "-n\nx=foo\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoiZm9vIn0NCg==",
+        "stderr_b64": "QXJndW1lbnQgYC1uJyBpcyBuZWl0aGVyIGs9diBub3Iga0B2DQo=",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "unicode-string-coercion",
+      "argv": [
+        "--",
+        "-n",
+        "x=\u00e9"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-0",
+      "argv": [
+        "x=0.10000000000000005"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjowLjF9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-1",
+      "argv": [
+        "x=1.2345678901234567"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxLjIzNDU2Nzg5MDEyMzQ1N30NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-2",
+      "argv": [
+        "x=9007199254740993"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijo5MDA3MTk5MjU0NzQwOTkyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-3",
+      "argv": [
+        "x=2.2250738585072014e-308"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoyLjIyNTA3Mzg1ODUwNzIwMWUtMzA4fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-4",
+      "argv": [
+        "x=4.9406564584124654e-324"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijo0Ljk0MDY1NjQ1ODQxMjQ2NWUtMzI0fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-5",
+      "argv": [
+        "x=1.0000000000000001e23"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxZSswMjN9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-6",
+      "argv": [
+        "x=2.675"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoyLjY3NX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-7",
+      "argv": [
+        "x=-0"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjotMH0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-8",
+      "argv": [
+        "x=1e-5"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxZS0wMDV9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-9",
+      "argv": [
+        "x=1e16"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxZSswMTZ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-10",
+      "argv": [
+        "x=1e309"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoiMWUzMDkifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-11",
+      "argv": [
+        "x=1e-324"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjowfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-12",
+      "argv": [
+        "x=1.7976931348623157e308"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxLjc5NzY5MzEzNDg2MjMxNmUrMzA4fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    },
+    {
+      "id": "number-13",
+      "argv": [
+        "x=1.234567890123456e-100"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4IjoxLjIzNDU2Nzg5MDEyMzQ1NmUtMTAwfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-review"
+    }
+  ],
+  "known_variants_13": [
+    {
+      "id": "space-question",
+      "argv": [
+        "-a",
+        "prefix ?.dat"
+      ],
+      "stdin": "",
+      "files": {
+        "prefix a.dat": "x"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJwcmVmaXggPy5kYXQiXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "space-nested",
+      "argv": [
+        "-a",
+        "* file.dat"
+      ],
+      "stdin": "",
+      "files": {
+        "a file.dat": "x"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyIqIGZpbGUuZGF0Il0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "unquoted-wildcard",
+      "argv": [
+        "-a",
+        "*.dat"
+      ],
+      "stdin": "",
+      "files": {
+        "a.dat": "x",
+        "b.dat": "y"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJhLmRhdCIsImIuZGF0Il0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "literal-missing-pattern",
+      "argv": [
+        "-a",
+        "absent*.dat"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyJhYnNlbnQqLmRhdCJdDQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-128",
+      "argv": [],
+      "stdin": "payload=@-\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nnext=3\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoiIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-4089",
+      "argv": [],
+      "stdin": "payload=@-\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nnext=3\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoienp6elxubmV4dD0zIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-4090",
+      "argv": [],
+      "stdin": "payload=@-\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nnext=3\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoienp6enpcbm5leHQ9MyJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-4091",
+      "argv": [],
+      "stdin": "payload=@-\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nnext=3\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoienp6enp6XG5uZXh0PTMifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-4092",
+      "argv": [],
+      "stdin": "payload=@-\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nnext=3\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoienp6enp6elxubmV4dD0zIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-8192",
+      "argv": [],
+      "stdin": "payload=@-\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\nnext=3\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoienp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6enp6XG5uZXh0PTMifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "shared-stream-crlf",
+      "argv": [],
+      "stdin": "payload=@-\r\nhello\r\nnext=3\r\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoiIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "ordinary-stdin",
+      "argv": [],
+      "stdin": "first=1\nsecond=2\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJmaXJzdCI6MSwic2Vjb25kIjoyfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    },
+    {
+      "id": "direct-stdin-file",
+      "argv": [
+        "payload=@-"
+      ],
+      "stdin": "hello\nworld\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwYXlsb2FkIjoiaGVsbG9cbndvcmxkIn0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      },
+      "family": "known-variant"
+    }
+  ],
+  "new_exact_20": [
+    {
+      "id": "mixed-explicit-coercion",
+      "family": "coercion",
+      "argv": [
+        "--",
+        "-s",
+        "label=007",
+        "-n",
+        "count=abcd",
+        "-b",
+        "flag=",
+        "tail=17"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"label\":\"007\",\"count\":4,\"flag\":false,\"tail\":17}\n",
+      "expected": {
+        "stdout_b64": "eyJsYWJlbCI6IjAwNyIsImNvdW50Ijo0LCJmbGFnIjpmYWxzZSwidGFpbCI6MTd9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "array-coercion-switch",
+      "family": "coercion",
+      "argv": [
+        "-a",
+        "--",
+        "-s",
+        "0009",
+        "-n",
+        "word",
+        "-b",
+        "",
+        "false"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WyIwMDA5Iiw0LGZhbHNlLGZhbHNlXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "null-suppression-coercion",
+      "family": "coercion",
+      "argv": [
+        "-n",
+        "--",
+        "empty=",
+        "-s",
+        "keep=",
+        "false=false",
+        "zero=0"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJmYWxzZSI6ZmFsc2UsInplcm8iOjB9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "boolean-at-and-cast",
+      "family": "coercion",
+      "argv": [
+        "--",
+        "-s",
+        "enabled@T",
+        "-n",
+        "disabled@-7",
+        "tag=ok"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJlbmFibGVkIjp0cnVlLCJkaXNhYmxlZCI6dHJ1ZSwidGFnIjoib2sifQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "numeric-spelling-mix",
+      "family": "coercion",
+      "argv": [
+        "decimal=1e-2",
+        "leading=0007",
+        "invalid=2.3.4",
+        "neg=-0.0"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"decimal\":0.01,\"leading\":7,\"invalid\":\"2.3.4\",\"neg\":-0}\n",
+      "expected": {
+        "stdout_b64": "eyJkZWNpbWFsIjowLjAxLCJsZWFkaW5nIjo3LCJpbnZhbGlkIjoiMi4zLjQiLCJuZWciOi0wfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-siblings",
+      "family": "structure",
+      "argv": [
+        "-d",
+        "/",
+        "room/name=lab",
+        "room/open=true",
+        "floor=2"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"room\":{\"name\":\"lab\",\"open\":true},\"floor\":2}\n",
+      "expected": {
+        "stdout_b64": "eyJyb29tIjp7Im5hbWUiOiJsYWIiLCJvcGVuIjp0cnVlfSwiZmxvb3IiOjJ9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-scalar-collision",
+      "family": "structure",
+      "argv": [
+        "-d",
+        ".",
+        "x=9",
+        "x.y=10",
+        "x.z=11"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IEpTT05fRVJSOiBDYW5ub3QgYWRkIHsieSI6MTB9IHRvIG5vbi1vYmplY3QgOQ0K",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "nested-reverse-collision",
+      "family": "structure",
+      "argv": [
+        "-d",
+        ".",
+        "x.y=10",
+        "x=9",
+        "tail=4"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJ4Ijp7InkiOjEwfSwieCI6OSwidGFpbCI6NH0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "loaded-object-overwrite",
+      "family": "structure",
+      "argv": [
+        "-f",
+        "seed.json",
+        "old=8",
+        "new=true"
+      ],
+      "stdin": "",
+      "files": {
+        "seed.json": "{\"old\":1,\"stable\":\"yes\"}"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJvbGQiOjEsInN0YWJsZSI6InllcyIsIm9sZCI6OCwibmV3Ijp0cnVlfQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "loaded-array-append",
+      "family": "structure",
+      "argv": [
+        "-a",
+        "-f",
+        "seed.json",
+        "3",
+        "null",
+        "tail"
+      ],
+      "stdin": "",
+      "files": {
+        "seed.json": "[1,2]"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "WzEsMiwzLG51bGwsInRhaWwiXQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "three-file-modes",
+      "family": "file-interaction",
+      "argv": [
+        "raw=@note.txt",
+        "encoded=%note.txt",
+        "parsed=:obj.json"
+      ],
+      "stdin": "",
+      "files": {
+        "note.txt": "hi\n",
+        "obj.json": "{\"n\":3}"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJyYXciOiJoaSIsImVuY29kZWQiOiJhR2tLIiwicGFyc2VkIjp7Im4iOjN9fQ0K",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "empty-file-and-fallback",
+      "family": "file-interaction",
+      "argv": [
+        "raw=@empty.txt",
+        "encoded=%empty.txt",
+        "tail=5"
+      ],
+      "stdin": "",
+      "files": {
+        "empty.txt": ""
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJyYXciOiIiLCJlbmNvZGVkIjoiIiwidGFpbCI6NX0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "escaped-file-markers",
+      "family": "file-interaction",
+      "argv": [
+        "at=\\@absent.txt",
+        "pct=\\%absent.txt",
+        "colon=\\:absent.txt"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "literal": "{\"at\":\"@absent.txt\",\"pct\":\"%absent.txt\",\"colon\":\":absent.txt\"}\n",
+      "expected": {
+        "stdout_b64": "eyJhdCI6IkBhYnNlbnQudHh0IiwicGN0IjoiJWFic2VudC50eHQiLCJjb2xvbiI6IjphYnNlbnQudHh0In0NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "stdin-json-then-argument",
+      "family": "file-interaction",
+      "argv": [
+        "-f",
+        "-",
+        "added=3"
+      ],
+      "stdin": "{\"present\":2}\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJwcmVzZW50IjoyLCJhZGRlZCI6M30NCg==",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "stdin-token-lines",
+      "family": "file-interaction",
+      "argv": [],
+      "stdin": "left=2\nright=3\nblank=\n",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJsZWZ0IjoyLCJyaWdodCI6MywiYmxhbmsiOm51bGx9DQo=",
+        "stderr_b64": "",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "invalid-json-with-trailing-pair",
+      "family": "negative",
+      "argv": [
+        "bad=:broken.json",
+        "tail=4"
+      ],
+      "stdin": "",
+      "files": {
+        "broken.json": "{\"x\":}"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IENhbm5vdCBkZWNvZGUgSlNPTiBpbiBmaWxlIGJyb2tlbi5qc29uDQo=",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "missing-file-multiple-modes",
+      "family": "negative",
+      "argv": [
+        "first=@gone.txt",
+        "second=%gone.txt",
+        "tail=true"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "Z29uZS50eHQ6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkNCmpvOiBDYW5ub3Qgb3BlbiBnb25lLnR4dCBmb3IgcmVhZGluZw0K",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "load-scalar-then-pair",
+      "family": "negative",
+      "argv": [
+        "-f",
+        "scalar.json",
+        "tail=4"
+      ],
+      "stdin": "",
+      "files": {
+        "scalar.json": "17"
+      },
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "",
+        "stderr_b64": "am86IElucHV0IEpTT04gbm90IGFuIGFycmF5IG9yIG9iamVjdDogMTcNCg==",
+        "returncode": 1,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "multiple-malformed-words",
+      "family": "negative",
+      "argv": [
+        "good=2",
+        "badword",
+        "also-bad",
+        "final=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJnb29kIjoyLCJmaW5hbCI6M30NCg==",
+        "stderr_b64": "QXJndW1lbnQgYGJhZHdvcmQnIGlzIG5laXRoZXIgaz12IG5vciBrQHYNCkFyZ3VtZW50IGBhbHNvLWJhZCcgaXMgbmVpdGhlciBrPXYgbm9yIGtAdg0K",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    },
+    {
+      "id": "invalid-coercion-between-pairs",
+      "family": "negative",
+      "argv": [
+        "--",
+        "a=2",
+        "-q",
+        "b=3"
+      ],
+      "stdin": "",
+      "files": {},
+      "outputs": [],
+      "expected": {
+        "stdout_b64": "eyJhIjoyLCJiIjozfQ0K",
+        "stderr_b64": "QXJndW1lbnQgYC1xJyBpcyBuZWl0aGVyIGs9diBub3Iga0B2DQo=",
+        "returncode": 0,
+        "files_b64": {}
+      }
+    }
+  ]
+}
