@@ -31,5 +31,12 @@
     "Host-enforced containment"
   ],
   "relative_document_links": "PASS",
-  "release_label_change": "Only SKILL.md metadata.version changed from 0.2.1-experimental to 0.2.1; instruction body and other 17 files unchanged."
+  "release_label_change": "Only SKILL.md metadata.version changed from 0.2.1-experimental to 0.2.1; instruction body and other 17 files unchanged.",
+  "regular_release_installation": {
+    "status": "PASS",
+    "repository": "NotLooshi/skills",
+    "tag": "v0.2.1",
+    "method": "Codex bundled installer, public download, non-active destination",
+    "files_matching_release_manifest": 18
+  }
 }
