@@ -16,12 +16,18 @@
     "matching_windows": 0,
     "limitation": "Not proof of rights clearance or absence of paraphrase."
   },
-  "installation_smoke": "PENDING",
+  "installation_smoke": {
+    "status": "PASS",
+    "method": "Codex bundled skill installer, git method, isolated non-active destination",
+    "installed_files_matching_evaluated_hashes": 18,
+    "host_activation": "NOT RUN; not installed in active discovery"
+  },
   "unrun": [
     "New agent investigations",
     "Natural activation and non-activation sweep for this revision",
     "All specialist cases",
     "Cross-host/platform behavior",
     "Host-enforced containment"
-  ]
+  ],
+  "relative_document_links": "PASS"
 }
