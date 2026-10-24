@@ -1,5 +1,9 @@
 # Skills
 
+## Cerebellum 2.0.3
+
+[Standalone agent operating prompt and optional skill](cerebellum/README.md) for evidence-led planning, testing, scope control and completion. Start with the [system prompt](cerebellum/Cerebellum-System-Prompt.md); no other skill or runtime is required. See its [evaluation summary](cerebellum/EVALUATION.md) and [MIT licence](cerebellum/LICENSE).
+
 ## DeepREA 0.2.1
 
 Evidence-led reverse engineering and reconstruction for coding agents. DeepREA bundles REA's specialist guidance and adds procedures for bounded investigation, evidence reuse, agent handoffs, runtime compatibility and executable checks.
