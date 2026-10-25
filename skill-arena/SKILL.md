@@ -21,7 +21,9 @@ Set a bounded scope and budget before running comparisons: task families, candid
 
 Keep a run directory outside all active skill roots. Record exact source paths, versions or content hashes, activation rules, provenance/license, required tools, dependencies and callers, linked resources, and accessible coverage. Record identical copies separately from aliases to the same source. Distinguish installed from currently discoverable: a cached plugin directory alone does not prove activation. Never copy credentials into the evidence bundle.
 
-Completion: a source manifest, scope, permitted actions, and bounded next family are recorded. When discovery cannot be inspected, label it unknown.
+For cleanup or optimization, back up every complete skills root in the authorized scope before discovery, benchmarking or changes. Use the high-compression, verified ZIP procedure in [references/consolidation.md](references/consolidation.md); a sandbox run backs up its copied roots. Keep this private recovery archive outside all skill roots and separate from shareable evidence. Do not silently omit files or proceed with cleanup after a backup failure. Read-only audits do not require creating an archive unless requested.
+
+Completion: a source manifest, scope, permitted actions, and bounded next family are recorded; cleanup runs also have a verified full-root backup and receipt. When discovery cannot be inspected, label it unknown.
 
 ## 2. Find actual overlap
 
@@ -87,7 +89,7 @@ When the requested scope includes cleanup and all gates pass, apply the smallest
 
 Verify the effective catalog after reload in a fresh host context, activation/non-activation cases, affected callers and representative workflows. A moved directory, changed file, or successful validator alone does not prove a skill is disabled. If host verification is unavailable, leave originals active and report a staged proposal. Restore the prior configuration if an applied batch fails its checks; report any unverified recovery honestly.
 
-Finish with measured before/after active counts when available, dispositions by family, evidence links, remaining gaps and rollback location. Mark outcomes separately: verified consolidation, staged proposal, or unresolved comparison. After each family, update the queue and proceed to the next actionable family. Stop when the scoped queue is resolved or an overall budget/authority/capability boundary requires a partial checkpoint. No background curation exists without a separately authorized scheduler.
+Finish with measured before/after active counts when available, dispositions by family, evidence links, remaining gaps and rollback location. Always report the backup's absolute path, covered roots, measured source/archive sizes, compression method and restore-verification result, including partial or failed runs. Say "all done" only when the requested scope is complete. Mark outcomes separately: verified consolidation, staged proposal, or unresolved comparison. After each family, update the queue and proceed to the next actionable family. Stop when the scoped queue is resolved or an overall budget/authority/capability boundary requires a partial checkpoint. No background curation exists without a separately authorized scheduler.
 
 After a discovery/comparison run, update the authorized [champion record](references/champions.md) with source identities, decisions, raw evidence links and retest conditions. Persist losses and ties as well as wins; retain the previous champion until verified promotion. Skip redundant comparisons only while the full comparison context still matches. If durable storage is unavailable, provide an exportable record and disclose that future recall is not established.
 

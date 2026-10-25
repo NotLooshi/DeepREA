@@ -16,3 +16,9 @@ The UI trial proposed UI/UX Pro Max as the default. Impeccable's overall advanta
 The distributed instruction package preserves the evaluated tournament rules and adds an executed conflict-safe recovery check. Older trials used the Skill Maid name. Renaming the skill does not expand what those trials establish.
 
 No general uplift, guaranteed savings, calibrated ranking or fully automatic library optimization is claimed. Tokens and comparable total costs were not measured. Keep results tied to source revisions, tasks, models and tools; retest when those change.
+
+## Full-folder backup update
+
+The bundled backup helper was tested with complete hidden/binary files, empty directories, separate roots, existing-backup refusal, invalid destinations, overlapping roots, files changing mid-run and root-junction replacement. It uses DEFLATE-9 and verifies real extraction and every file hash. Tests observed the missing behavior before implementation; the junction regression was reproduced before repair. Backup storage permissions remain the caller’s responsibility; ZIPs are not encrypted.
+
+A complete copied-library run archived 441 files: 6,408,585 source bytes to 1,806,340 ZIP bytes, with extraction and hashes verified. This measures that copy, not a guaranteed compression ratio for every library.

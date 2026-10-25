@@ -28,6 +28,14 @@ Use $skill-arena to group my skills by job and identify overlap.
 Audit only: do not download, benchmark or change anything.
 ```
 
+## Backup comes first
+
+Before cleanup or optimization, Skill Arena saves every complete skills folder in scope to a new high-compression ZIP outside the skill directories. It uses DEFLATE level 9, includes hidden files and empty folders, and verifies a temporary extraction against file hashes before continuing. It never overwrites an older backup. Audit-only requests remain read-only.
+
+The bundled helper needs Python 3.10+; an existing archiver can be used only with equivalent verified coverage. Links, unreadable files or changing sources stop the backup and cleanup. The ZIP is unencrypted: keep it in a private local directory. It preserves ordinary files and directories, not every filesystem permission or metadata feature.
+
+The final message tells you exactly where the backup is, which folders it covers, its measured size and whether restoration was verified—even if the run stops early. To roll back, extract to a new folder and follow the [conflict-safe restoration procedure](references/consolidation.md), preserving newer edits.
+
 ## What you get
 
 A family queue, pinned source identities, actual test artifacts, keep/replace/defer decisions, and recovery information. Discovery temporarily expands the candidate pool; losing contenders do not become active skills. A tie or missing tool can correctly leave the existing collection unchanged.
