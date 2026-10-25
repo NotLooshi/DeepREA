@@ -1,5 +1,9 @@
 # Skills
 
+## Skill Arena
+
+[Discover, benchmark and keep the best skills for your work](skill-arena/README.md). Skill Arena groups overlapping skills by job, tests real outputs, and keeps a smaller portfolio when the evidence supports it. Includes reversible consolidation and saved comparison history. [MIT license](skill-arena/LICENSE) · [Evaluation and limits](skill-arena/EVALUATION.md).
+
 ## Cerebellum 2.0.3
 
 [Standalone agent operating prompt and optional skill](cerebellum/README.md) for evidence-led planning, testing, scope control and completion. Start with the [system prompt](cerebellum/Cerebellum-System-Prompt.md); no other skill or runtime is required. See its [evaluation summary](cerebellum/EVALUATION.md) and [MIT licence](cerebellum/LICENSE).

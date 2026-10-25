@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Arena"
+  short_description: "Benchmark task families and retain the strongest skill set"
+  default_prompt: "Use $skill-arena to group my skills by job, discover contenders, benchmark real outputs, retain the smallest proven portfolio, and continue family by family through the scoped library."
