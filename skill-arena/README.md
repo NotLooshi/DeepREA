@@ -1,12 +1,26 @@
 # Skill Arena
 
-**Discover. Benchmark. Keep the best.**
+**Stop collecting promises. Compare what actually works.**
+
+[Get started](#install) · [Try a comparison](#try-it) · [Evidence](EVALUATION.md) · [All skills](../README.md)
+
+Your agent has five skills for the same job. You need to know which one helps, which ones overlap, and whether a specialist still earns its place. Skill Arena turns that collection into a bounded comparison with saved evidence and a recovery route.
+
+| Step | What happens | What you keep |
+| --- | --- | --- |
+| Map | Group skills by the jobs they do | A queue of task families |
+| Challenge | Discover alternatives and pin their sources | A bounded candidate pool |
+| Compare | Run shared tasks and inspect real outputs | Test artifacts and scoped findings |
+| Decide | Keep, replace or defer based on the evidence | A justified portfolio and recovery information |
+
+A tie is a useful result. If a challenger does not earn its place, the current collection can stay as it is.
+
 
 A free agent skill that helps keep your skill collection useful. It groups skills by the jobs they do, finds alternatives, benchmarks real outputs, and keeps the smallest portfolio the evidence supports.
 
 ## Install
 
-Ask Codex's skill installer to install the `skill-arena` directory from `NotLooshi/skills`. Or copy this complete folder into your host's skills directory, preserving any previous version outside active discovery. For Codex, that is `$CODEX_HOME/skills/skill-arena`, normally `~/.codex/skills/skill-arena`.
+Ask Codex's skill installer to install the `skill-arena` directory from `NotLooshi/skills`. Or copy the complete `skill-arena/` folder into your host's skills directory, preserving any previous version outside active discovery. For Codex, that is `$CODEX_HOME/skills/skill-arena`, normally `~/.codex/skills/skill-arena`.
 
 Refresh skill discovery using your host's supported mechanism and confirm `skill-arena` appears. If replacing Skill Maid, preserve that package and update callers from `$skill-maid` to `$skill-arena`; avoid leaving both discoverable.
 

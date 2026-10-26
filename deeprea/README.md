@@ -2,7 +2,7 @@
 
 **Understand the behavior. Rebuild it. Check it against the original.**
 
-[Get started](#install-in-codex) · [Measured results](#observed-results) · [Skill source](../deeprea/SKILL.md) · [All skills](../README.md)
+[Get started](#install-in-codex) · [Measured results](#observed-results) · [Skill source](SKILL.md) · [All skills](../README.md)
 
 You have a shipped application and a specific behavior to recover. DeepREA guides your coding agent from that question through investigation, a behavior specification, and checks against the original.
 
@@ -32,7 +32,7 @@ The default destination is `$CODEX_HOME/skills/deeprea`, normally `~/.codex/skil
 Use $deeprea to investigate this supplied application. Recover the requested behavior, distinguish observations from hypotheses, and verify the reconstruction against the original within the permitted workspace.
 ```
 
-Read [the bundled REA connection guidance](../deeprea/references/connection-and-recovery.md) if the task needs REA MCP. Check the tools actually exposed by your host; documented engines are not automatically installed. Python 3.11+ is required only for the bundled JSON-lines QC runner. The native benchmark used Windows, Ghidra and a clean Codex CLI profile; other host/platform workflows have not been established by that experiment.
+Read [the bundled REA connection guidance](references/connection-and-recovery.md) if the task needs REA MCP. Check the tools actually exposed by your host; documented engines are not automatically installed. Python 3.11+ is required only for the bundled JSON-lines QC runner. The native benchmark used Windows, Ghidra and a clean Codex CLI profile; other host/platform workflows have not been established by that experiment.
 
 ## What changed
 
@@ -74,5 +74,7 @@ The first command verifies the packaged skill hashes and recomputes the publishe
 Regular, opt-in release. Natural activation/non-activation, every specialist branch, non-Windows native behavior and generalization to a new application have not been established for this exact version. No automatic tool installation, instruction enforcement or guaranteed containment is promised.
 
 Keep your previous skill available outside active discovery. To roll back, remove this candidate from active discovery and restore the prior skill through your host's supported installation mechanism. Do not leave two conflicting `deeprea` versions active. Publication does not install or activate the skill on the author's machine.
+
+The README was added after the evaluated release; the 18 existing package files remain unchanged.
 
 Version 0.2.1 removes the experimental label. Relative to the evaluated snapshot, only the skill version metadata changed; the instruction body and other 17 package files are identical. This release-label change does not expand the measured performance claims.
