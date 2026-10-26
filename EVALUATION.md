@@ -27,3 +27,7 @@ No source/oracle leakage was observed in the audit. Advisory access restrictions
 ## Unrun for this release
 
 No new paid model investigation, new-target generalization panel, full specialist coverage sweep, hostile-target containment test or cross-host activation sweep was run during packaging. Package checks and QC tests are reported separately from the historical behavioral comparison.
+
+## Reporting hotfix 0.2.3
+
+The results above describe the historical 0.2.1 package. See [the separate hotfix evaluation](HOTFIX-0.2.3.md) for the fresh 0.2.1/0.2.3 comparison and its limitations.

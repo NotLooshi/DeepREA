@@ -1,42 +1,29 @@
 {
-  "checked_utc": "2026-10-24T06:02:39.190268+00:00",
-  "version": "0.2.1",
+  "checked_utc": "2026-10-26T08:43:36.104319+00:00",
+  "version": "0.2.3",
   "skill_files": 18,
-  "skill_matches_evaluated_snapshot": false,
+  "skill_matches_evaluated_completion_candidate": true,
+  "unchanged_files_from_0.2.1": 16,
   "anthropic_quick_validate": "PASS",
-  "recorded_grades_recomputed": "PASS",
+  "historical_recorded_grades_recomputed": "PASS; older 0.2.1 comparison, not hotfix results",
   "qc_subprocess_tests": {
     "passed": 17,
     "failed": 0,
-    "seconds": 63.907
+    "seconds": 31.933
   },
-  "credential_and_personal_path_pattern_scan": "no matches",
-  "course_verbatim_scan": {
-    "window_words": 18,
-    "matching_windows": 0,
-    "limitation": "Not proof of rights clearance or absence of paraphrase."
+  "relative_document_links": {
+    "checked": 34,
+    "status": "PASS"
   },
-  "installation_smoke": {
-    "status": "PASS",
-    "method": "Codex bundled skill installer, git method, isolated non-active destination",
-    "installed_files_matching_evaluated_hashes": 18,
-    "host_activation": "NOT RUN; not installed in active discovery",
-    "note": "Executed on the prior label; current tagged release installation is checked separately."
-  },
+  "public_path_and_token_pattern_scan": "PASS; pattern scan is not a comprehensive secrets audit",
+  "diff_whitespace": "PASS with cr-at-eol; preserve evaluated CRLF bytes",
+  "activation": "NOT RUN; no local active installation changed",
   "unrun": [
-    "New agent investigations",
-    "Natural activation and non-activation sweep for this revision",
-    "All specialist cases",
-    "Cross-host/platform behavior",
-    "Host-enforced containment"
+    "Fresh model investigations during publication; prior exact-candidate pair retained",
+    "Forced interruption and repeated timeout frequency",
+    "Natural activation/non-activation",
+    "Unavailable clock behavior",
+    "Full specialist and cross-platform coverage"
   ],
-  "relative_document_links": "PASS",
-  "release_label_change": "Only SKILL.md metadata.version changed from 0.2.1-experimental to 0.2.1; instruction body and other 17 files unchanged.",
-  "regular_release_installation": {
-    "status": "PASS",
-    "repository": "NotLooshi/skills",
-    "tag": "v0.2.1",
-    "method": "Codex bundled installer, public download, non-active destination",
-    "files_matching_release_manifest": 18
-  }
+  "behavioral_evidence": "HOTFIX-0.2.3.md; reported private evaluation, not a public reproduction"
 }

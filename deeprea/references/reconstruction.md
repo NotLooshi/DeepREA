@@ -28,7 +28,11 @@ For each divergence, discriminate implementation, specification, oracle, environ
 
 For native command-line targets, include the relevant [runtime-boundary interactions](runtime-boundaries.md), not just isolated option/value examples. A known failure becomes a regression case; it does not remain a held-out test after the investigator has seen it. Check a neighboring variation against the original before treating a repair as a general rule.
 
-Before the investigation deadline, stop adding exploratory work when it would displace verification of the current artifact. Preserve a runnable version, complete a bounded final subprocess comparison, and report unrun checks explicitly. Avoid editing the candidate while that final comparison runs; later edits invalidate its artifact identity.
+Treat delivery as a maintained artifact. When a report is requested and file writes are authorized, save a truthful partial report in the requested format alongside the first runnable reconstruction. Record observed evidence, current gaps and checks still unrun. Refresh it at substantive verification checkpoints rather than leaving report creation until the end. After an implementation edit, mark verification of the current artifact pending while preserving previous results as historical evidence.
+
+For a deadline-bound investigation, establish the deadline from the available clock and check remaining time at substantive checkpoints. Reserve time for a bounded final subprocess comparison, report refresh and the required final response; use observed durations of relevant finishing work when available. If the clock or deadline is unavailable, keep that uncertainty explicit and maintain the report anyway. When another exploratory step would consume the finishing reserve, perform the final comparison and delivery first. A fixed call count or universal time percentage cannot establish sufficient coverage.
+
+Preserve a runnable version and keep it unchanged during the final comparison. Update the report from actual results against those bytes, then return the requested response before the deadline. If time is insufficient, retain the runnable artifact and partial report, identify unrun checks and unresolved behavior, and keep acceptance criteria unchanged. A later edit requires renewed verification; a saved partial report is not a completed reconstruction.
 
 ## Deliver within scope
 

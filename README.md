@@ -8,7 +8,7 @@
 
 [Standalone agent operating prompt and optional skill](cerebellum/README.md) for evidence-led planning, testing, scope control and completion. Start with the [system prompt](cerebellum/Cerebellum-System-Prompt.md); no other skill or runtime is required. See its [evaluation summary](cerebellum/EVALUATION.md) and [MIT licence](cerebellum/LICENSE).
 
-## DeepREA 0.2.1
+## DeepREA 0.2.3
 
 Evidence-led reverse engineering and reconstruction for coding agents. DeepREA bundles REA's specialist guidance and adds procedures for bounded investigation, evidence reuse, agent handoffs, runtime compatibility and executable checks.
 
@@ -19,7 +19,7 @@ This is an independent adaptation, not an official REA release. It works without
 Ask Codex's skill installer to install the `deeprea` directory from this repository. Review the files first and keep any existing installation recoverable. With the bundled installer script available, its supported arguments are:
 
 ```text
-python /path/to/skill-installer/scripts/install-skill-from-github.py --repo NotLooshi/skills --path deeprea --ref v0.2.1
+python /path/to/skill-installer/scripts/install-skill-from-github.py --repo NotLooshi/skills --path deeprea --ref v0.2.3
 ```
 
 The default destination is `$CODEX_HOME/skills/deeprea`, normally `~/.codex/skills/deeprea`. The installer refuses an existing destination. Follow the installed host's reload/discovery instructions, then explicitly invoke:
@@ -39,7 +39,7 @@ Read [the bundled REA connection guidance](deeprea/references/connection-and-rec
 
 The upstream REA entry and six specialist references remain bundled. See [attribution and source mapping](ATTRIBUTION.md).
 
-## Observed results
+## Historical 0.2.1 results
 
 One fresh, unaided investigation per skill on the same jo 1.9 Windows binary; same requested model (`gpt-6-astra`, ultra), Codex CLI 0.156.1 and 20-minute limit. No Cerebellum loaded in either condition.
 
@@ -69,4 +69,6 @@ Regular, opt-in release. Natural activation/non-activation, every specialist bra
 
 Keep your previous skill available outside active discovery. To roll back, remove this candidate from active discovery and restore the prior skill through your host's supported installation mechanism. Do not leave two conflicting `deeprea` versions active. Publication does not install or activate the skill on the author's machine.
 
-Version 0.2.1 removes the experimental label. Relative to the evaluated snapshot, only the skill version metadata changed; the instruction body and other 17 package files are identical. This release-label change does not expand the measured performance claims.
+Version 0.2.3 is a reporting hotfix: save a truthful partial report alongside the first runnable reconstruction, preserve verification status through edits, and refresh before delivery. The package exactly matches the evaluated completion candidate. Only version metadata and the existing reconstruction completion paragraph changed; the other 16 files are identical to 0.2.1. No LeanREA merge is included.
+
+The fresh baseline and candidate both scored 45/46 on the regression panel and passed the other four panels. One case improved and another regressed. Earlier report persistence was observed; reliable timeout prevention, intermediate checkpoint refresh and explicit deadline management were not demonstrated. See [hotfix evidence and sources](HOTFIX-0.2.3.md). The older 46/46 result above belongs to a separate historical run, not this hotfix evaluation. Version v0.2.1 remains available for rollback.
