@@ -1,72 +1,68 @@
-# Skills
+<p align="center"><img src="assets/skills-banner.svg" alt="Understand software. Find the skills worth keeping." width="100%"></p>
 
-## Skill Arena
+<h1 align="center">Give your agent a better way to work.</h1>
+<p align="center">Understand the software you study.<br>Find the skills worth keeping.</p>
+<p align="center"><a href="#choose-your-skill">Explore the skills</a> · <a href="#get-started">Get started</a> · <a href="#evidence-you-can-inspect">Inspect the evidence</a></p>
 
-[Discover, benchmark and keep the best skills for your work](skill-arena/README.md). Skill Arena groups overlapping skills by job, tests real outputs, and keeps a smaller portfolio when the evidence supports it. Includes reversible consolidation and saved comparison history. [MIT license](skill-arena/LICENSE) · [Evaluation and limits](skill-arena/EVALUATION.md).
+---
 
-## Cerebellum 2.0.3
+## Choose your skill
 
-[Standalone agent operating prompt and optional skill](cerebellum/README.md) for evidence-led planning, testing, scope control and completion. Start with the [system prompt](cerebellum/Cerebellum-System-Prompt.md); no other skill or runtime is required. See its [evaluation summary](cerebellum/EVALUATION.md) and [MIT licence](cerebellum/LICENSE).
+Two focused skills for two different jobs. Start with the one that solves your next problem; each can be used independently.
 
-## DeepREA 0.2.1
+- **[Skill Arena](docs/skill-arena.md)** — Compare your skills on real work and find the ones worth keeping.
+- **[DeepREA](docs/deeprea.md)** — Investigate shipped software and check a reconstruction against the original.
 
-Evidence-led reverse engineering and reconstruction for coding agents. DeepREA bundles REA's specialist guidance and adds procedures for bounded investigation, evidence reuse, agent handoffs, runtime compatibility and executable checks.
+### Skill Arena · Put your skills to the test
 
-This is an independent adaptation, not an official REA release. It works without Cerebellum. Installing the skill supplies instructions; it does not install REA, analysis engines, Python or a sandbox.
+Several skills promise the same thing. Which ones earn their place? Skill Arena groups them by job, discovers challengers, and compares actual outputs. You get scoped keep, replace, or defer decisions, with saved comparison history. Cleanup includes a verified backup and recovery information.
 
-## Install in Codex
-
-Ask Codex's skill installer to install the `deeprea` directory from this repository. Review the files first and keep any existing installation recoverable. With the bundled installer script available, its supported arguments are:
-
-```text
-python /path/to/skill-installer/scripts/install-skill-from-github.py --repo NotLooshi/skills --path deeprea --ref v0.2.1
-```
-
-The default destination is `$CODEX_HOME/skills/deeprea`, normally `~/.codex/skills/deeprea`. The installer refuses an existing destination. Follow the installed host's reload/discovery instructions, then explicitly invoke:
+Start with a read-only audit:
 
 ```text
-Use $deeprea to investigate this supplied application. Recover the requested behavior, distinguish observations from hypotheses, and verify the reconstruction against the original within the permitted workspace.
+Use $skill-arena to group my skills by job and identify overlap.
+Audit only: do not download, benchmark or change anything.
 ```
 
-Read [the bundled REA connection guidance](deeprea/references/connection-and-recovery.md) if the task needs REA MCP. Check the tools actually exposed by your host; documented engines are not automatically installed. Python 3.11+ is required only for the bundled JSON-lines QC runner. The native benchmark used Windows, Ghidra and a clean Codex CLI profile; other host/platform workflows have not been established by that experiment.
+**[Explore Skill Arena →](docs/skill-arena.md)**
 
-## What changed
+### DeepREA · From shipped software to understood behavior
 
-- Explicit evidence identities and uncertainty, with bounded next steps when decompilation or runtime observations are inconclusive.
-- Bounded parallel tasks, shared-session ownership and conflict resolution based on evidence.
-- A finite JSON-lines comparator that challenges itself and rechecks artifact identities before accepting saved results.
-- Native CLI guidance for quoting, wildcards, shared streams, filenames and diagnostics.
-
-The upstream REA entry and six specialist references remain bundled. See [attribution and source mapping](ATTRIBUTION.md).
-
-## Observed results
-
-One fresh, unaided investigation per skill on the same jo 1.9 Windows binary; same requested model (`gpt-6-astra`, ultra), Codex CLI 0.156.1 and 20-minute limit. No Cerebellum loaded in either condition.
-
-| Panel | REA v42 | DeepREA 0.2.1 |
-|---|---:|---:|
-| Original cases | 56/56 | 56/56 |
-| Known regression cases | 38/46 | 46/46 |
-| Known variants | 12/13 | 13/13 |
-| Newly authored exact cases | 20/20 | 20/20 |
-
-The observed advantage is on known compatibility regressions. The new cases tie. The target informed skill development, and there is only one attempt per condition: this is not evidence of general superiority. Both finished before the deadline. DeepREA still attempted an out-of-workspace missing-file probe, so its run was not fully scope-compliant. Its local investigation also disclosed two usage-prefix mismatches outside the frozen grading scope.
-
-[Evaluation details and recorded evidence](EVALUATION.md) explain what can be checked from this release. Host isolation and prompt instructions are not equivalent to an OS security boundary. The QC runner executes real commands with host permissions; use appropriate containment for untrusted targets.
-
-## Verify the package
+Start with an application, binary, package, or recorded runtime evidence. DeepREA guides the investigation around the behavior you need to recover, preserves what was observed, and helps check a reconstruction against the original. It bundles REA specialist guidance with additional investigation and verification procedures.
 
 ```text
-python verify_release.py
-python -m unittest discover -s tests -p test_qc.py -v
+Use $deeprea to investigate this supplied application.
+Explain how its export feature works, show the supporting evidence,
+and identify what remains unknown. Stay within the supplied workspace.
 ```
 
-The first command verifies the packaged skill hashes and recomputes the published grades from retained expected/actual outputs. It does not rerun the original agent investigations. The second runs the QC runner's real subprocess tests. See [release checks](RELEASE-CHECKS.json) for observed results and unrun checks.
+**[Explore DeepREA →](docs/deeprea.md)**
 
-## Status and rollback
+## Get started
 
-Regular, opt-in release. Natural activation/non-activation, every specialist branch, non-Windows native behavior and generalization to a new application have not been established for this exact version. No automatic tool installation, instruction enforcement or guaranteed containment is promised.
+Review the skill's files, then install its complete folder through your host's supported skill mechanism. In Codex, ask its skill installer:
 
-Keep your previous skill available outside active discovery. To roll back, remove this candidate from active discovery and restore the prior skill through your host's supported installation mechanism. Do not leave two conflicting `deeprea` versions active. Publication does not install or activate the skill on the author's machine.
+```text
+Install the skill-arena folder from https://github.com/NotLooshi/skills.
+Preserve any existing version so I can roll back.
+```
 
-Version 0.2.1 removes the experimental label. Relative to the evaluated snapshot, only the skill version metadata changed; the instruction body and other 17 package files are identical. This release-label change does not expand the measured performance claims.
+Replace `skill-arena` with `deeprea` to choose another skill. Refresh discovery using your host's supported mechanism, confirm the skill is available, and try its example above.
+
+Installing a skill adds instructions and bundled resources. Execution tools remain host-dependent: DeepREA does not install REA or analysis engines, and Skill Arena needs suitable tools to run comparisons. See each project page for prerequisites and recovery steps.
+
+## Evidence you can inspect
+
+**[Skill Arena](skill-arena/EVALUATION.md):** internal output comparisons, catalog checks, and interrupted-recovery execution. General performance gains and operation on every host remain unverified.
+
+**[DeepREA](EVALUATION.md):** on one Windows application, 46/46 known regression cases passed versus REA's 38/46; both tied on 20 new exact cases. One run per condition, a development-known target, and a disclosed scope deviation limit the result. This does not establish general superiority.
+
+The project pages keep the details close to their claims. DeepREA's public records support rechecking grades; they do not provide a complete rerun of the original agent investigations.
+
+## Source and licenses
+
+Read the instructions before installing: [Skill Arena](skill-arena/SKILL.md), [DeepREA](deeprea/SKILL.md).
+
+[Skill Arena](skill-arena/LICENSE) includes its own MIT license. DeepREA is an independent adaptation of REA; see the repository [license](LICENSE) and [attribution](ATTRIBUTION.md) for its retained upstream material.
+
+Also in this repository: [Cerebellum](cerebellum/README.md), a standalone agent operating prompt.
