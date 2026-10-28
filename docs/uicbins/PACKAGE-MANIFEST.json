@@ -1,0 +1,189 @@
+{
+  "version": "6.4.6",
+  "files": {
+    "skills/uicbins/LICENSE": {
+      "sha256": "3199bea7dc59faf64522564459aec181be7a6fbc3730deaff4f6f40e4bc2a238",
+      "bytes": 1088
+    },
+    "skills/uicbins/NOTICE.md": {
+      "sha256": "b71f38d0d26c644d7c5cb1bfb8f8abd38b8dd8e53744bc8adc2baabd7a49edc4",
+      "bytes": 2895
+    },
+    "skills/uicbins/references/completion-checks.md": {
+      "sha256": "9409599a168f549395f58ed4beae423c54a2ebbfd839d3a3de5845a1d2906eb3",
+      "bytes": 8369
+    },
+    "skills/uicbins/references/content-and-discovery.md": {
+      "sha256": "1e315b78e27088fc3471e7be4a1703f014417e6446573c31bfe42ee0e6b247a6",
+      "bytes": 9748
+    },
+    "skills/uicbins/references/design-toolkit.md": {
+      "sha256": "e252b256bb2fbafb427868b0ecd260285f29c4b753f905a47eff5d6780bff5ad",
+      "bytes": 7145
+    },
+    "skills/uicbins/references/discovery-checking.md": {
+      "sha256": "ce8388895738060f16b10d3d0b0d2c3ced8780bdfbcbf436bc3b040dd4081e8f",
+      "bytes": 3150
+    },
+    "skills/uicbins/references/final-checks.md": {
+      "sha256": "87cb9433e82ce13b950e230c8c5822f831868cdfbe8b8e4be231c3a7f19aea89",
+      "bytes": 11524
+    },
+    "skills/uicbins/references/mutation-checking.md": {
+      "sha256": "25897476a22ef65cd21b8e2500a1e903b38f11a521cf817e8b18f532b5a513e6",
+      "bytes": 4099
+    },
+    "skills/uicbins/references/reference-adaptation.md": {
+      "sha256": "56b11f5d7bf4654bb996774193219c9dcc6d4bf4569ee52a0193999ab65ace8a",
+      "bytes": 8510
+    },
+    "skills/uicbins/references/rendered-review.md": {
+      "sha256": "6d51e9a2491d6438bc9e498718357999984248095a33b0232765c4bb4cd3d5d9",
+      "bytes": 7252
+    },
+    "skills/uicbins/references/state-checking.md": {
+      "sha256": "ff92a8bc8e6e5bb96040681e97f867a9007585b1f0e0002de75e9aceeceb2102",
+      "bytes": 4870
+    },
+    "skills/uicbins/scripts/check-discovery.mjs": {
+      "sha256": "2e2f366cab1adc52ced7ec68b21a76e41745cfa22f587df25747d4c2fba20500",
+      "bytes": 7973
+    },
+    "skills/uicbins/scripts/check-mutations.mjs": {
+      "sha256": "02b866473a0b17fcf546250edf04432b285bbb79e8dfb815f7ebb9ccef6502f2",
+      "bytes": 7640
+    },
+    "skills/uicbins/scripts/check-rendered.mjs": {
+      "sha256": "1c7e3663fb051624d8864cb97575f64e74a3222022be7a9679525b194a74e649",
+      "bytes": 6237
+    },
+    "skills/uicbins/scripts/check-ui-state.mjs": {
+      "sha256": "7ee4ce5fd34ed66c312bf4b821b4fd1f579ebc4cd31a40eeb2abe85d2c7b07fd",
+      "bytes": 6081
+    },
+    "skills/uicbins/scripts/finish.mjs": {
+      "sha256": "cd146c8526bf6ab9453713a678c837fb205cb5c104985e65c5a4198da4a1d500",
+      "bytes": 10034
+    },
+    "skills/uicbins/scripts/inspect.mjs": {
+      "sha256": "6578ce6ed3cc28f1f3fabaf2346ef42eae34c768373dac3fcb58cd2d8766d79a",
+      "bytes": 5943
+    },
+    "skills/uicbins/scripts/inspection-policy.mjs": {
+      "sha256": "819dc0644970c93b1225197b3b0394482ca08d9f48a3db04f216b3b9a3ac56fb",
+      "bytes": 2354
+    },
+    "skills/uicbins/SKILL.md": {
+      "sha256": "d1fc0d0711e0e37d90c6c8033c5d66c8bd57b84e6967cfd1a7f254945847c954",
+      "bytes": 8785
+    },
+    "skills/uicbins/THIRD-PARTY-NOTICES.md": {
+      "sha256": "4b729f71998e15d5f5b9dca8d520806b4d30bb7d92a8aaef34a241f6ff5cb840",
+      "bytes": 7003
+    },
+    "skills/uicbins/toolkit/taste/assets/app.css": {
+      "sha256": "16518c3a999fb81b2698137f1f743128c189272e8b1d411c4b02598c6755b67f",
+      "bytes": 15918
+    },
+    "skills/uicbins/toolkit/taste/assets/base.css": {
+      "sha256": "aa6ea21613c79e06e06dea3d33200c78590c89b0346bb976ec07947bb45ceafa",
+      "bytes": 6520
+    },
+    "skills/uicbins/toolkit/taste/assets/base.js": {
+      "sha256": "8d50416125596b84c0083d5d5ffba09add57db4b06cbf0eedac2d4999b7653bc",
+      "bytes": 2162
+    },
+    "skills/uicbins/toolkit/taste/assets/charts.js": {
+      "sha256": "a7e916594729576b7c7e37048a68508a3243fe8fbc9654775cd245232e9f8100",
+      "bytes": 59016
+    },
+    "skills/uicbins/toolkit/taste/assets/scenes/stage.css": {
+      "sha256": "b5c587dac45ac6fcc34ae7cb4aa2b3e43797b2ef5d71fd32b48483bda3fca3e0",
+      "bytes": 1141
+    },
+    "skills/uicbins/toolkit/taste/assets/scenes/stage.js": {
+      "sha256": "9ce782a94406e6a230c49ca5f87e56aff9d436da3f56416b1659421f8976bc2b",
+      "bytes": 7691
+    },
+    "skills/uicbins/toolkit/taste/library/app.json": {
+      "sha256": "3678ccbe1e8d05feff6d4f07fa16a0d610aefeea5e697e842a876713ba763cf5",
+      "bytes": 74229
+    },
+    "skills/uicbins/toolkit/taste/library/directions.json": {
+      "sha256": "d71e3824af33a92d9e1ca543e17f80baa5b7a30c815df5125cfe3300a14892c1",
+      "bytes": 61466
+    },
+    "skills/uicbins/toolkit/taste/library/heroes.json": {
+      "sha256": "98d5e01104412a5fb27936f9c686f3bc0a5f76ce0793186d3de46b982c65b172",
+      "bytes": 108240
+    },
+    "skills/uicbins/toolkit/taste/library/motions.json": {
+      "sha256": "51815dd09a823c829897f99ed9ea7dc5c35bd305ac989b8a0632ea6d42a3f08b",
+      "bytes": 9033
+    },
+    "skills/uicbins/toolkit/taste/library/palettes.json": {
+      "sha256": "a14be9f45baba848c53436f4aa44eb4f1925ad3e232c5d1dcddf4f565661a525",
+      "bytes": 34753
+    },
+    "skills/uicbins/toolkit/taste/library/photos.json": {
+      "sha256": "8fc3b76bca90f44675bd99d99bb4ce95b0756c6c5d4141b7e917d11d90e61520",
+      "bytes": 160632
+    },
+    "skills/uicbins/toolkit/taste/library/sections.json": {
+      "sha256": "7c2c8a470a22501176948661f803434db8c542a511281752c717252de80c1ad8",
+      "bytes": 276146
+    },
+    "skills/uicbins/toolkit/taste/library/sites.json": {
+      "sha256": "a2bc4d0cff8ebff481f0dfd4879c106d5e1e16cb3122f9ab3702184a5e1f3502",
+      "bytes": 869073
+    },
+    "skills/uicbins/toolkit/taste/library/type.json": {
+      "sha256": "dbabf41a468775cf6cc5ea5f3c898b0663293822e167b72b02feba1ef03ebf37",
+      "bytes": 82326
+    },
+    "skills/uicbins/toolkit/taste/LICENSE": {
+      "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+      "bytes": 1065
+    },
+    "skills/uicbins/toolkit/taste/scripts/assets.mjs": {
+      "sha256": "b4b4b99b5634735f5a0b4213169cda5240ee6bbed8ed8042ad1bcf2b6607c1fa",
+      "bytes": 64522
+    },
+    "skills/uicbins/toolkit/taste/scripts/draw.mjs": {
+      "sha256": "6c2047d207d2400d3b099956dfe2ac306203b614246e66bc8760212a7f797dbf",
+      "bytes": 54140
+    },
+    "skills/uicbins/toolkit/taste/scripts/inspect.mjs": {
+      "sha256": "c0d7366f789b3f594787b37a525d1d7096104a499aac8a97ae04b405046cf02c",
+      "bytes": 28853
+    },
+    "skills/uicbins/toolkit/taste/scripts/lib/app-draw.mjs": {
+      "sha256": "aa0802d341d19b53ec14ec21746e428be49a8ec3ed7b30253194105fc18a8df6",
+      "bytes": 14715
+    },
+    "skills/uicbins/toolkit/taste/scripts/lib/cdp.mjs": {
+      "sha256": "320fb75c6454a97b88458e5c33559a1188042aa0041bd5eff53455900236c88a",
+      "bytes": 11920
+    },
+    "skills/uicbins/toolkit/taste/scripts/lib/inspection-files.mjs": {
+      "sha256": "5635c0d5fbe0f5bd012e58534bcd554ff7440a4e5c724a61a61c476c7f42e918",
+      "bytes": 478
+    },
+    "skills/uicbins/toolkit/taste/scripts/lib/probe.mjs": {
+      "sha256": "a5a17df891e438f55f196d8233601c3c79c873755f442c1ac5c3568de4e6bb48",
+      "bytes": 82552
+    },
+    "skills/uicbins/toolkit/taste/scripts/lib/rules.mjs": {
+      "sha256": "8244aa9f53e77a59a562410310414e6b1a0f0cf002ce8f5aa792740b7f0149bf",
+      "bytes": 37298
+    },
+    "skills/uicbins/toolkit/taste/scripts/lint.mjs": {
+      "sha256": "05f2fae2f56fc051b539cdbacb43a6f78fbbfb9644bb74aa11be472ff12dcaf5",
+      "bytes": 11747
+    },
+    "skills/uicbins/toolkit/taste/scripts/scenes.mjs": {
+      "sha256": "234ec582e2b841457c33033feeeba8535f9ac285495a74d08dc533a1566c90d5",
+      "bytes": 8980
+    }
+  }
+}

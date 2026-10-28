@@ -1,5 +1,9 @@
 # Skills
 
+## UICBINS 6.4.6
+
+[UI Can't Believe It's Not Slop](docs/uicbins/README.md): a standalone workflow for distinctive web interfaces, complete interactions, URL-based reference adaptation and internal design/functional review. [Skill](skills/uicbins/SKILL.md) · [Installation](docs/uicbins/README.md#install-from-this-repository) · [Evaluation and limits](docs/uicbins/EVALUATION.md) · [MIT licence](skills/uicbins/LICENSE).
+
 ## Skill Arena
 
 [Discover, benchmark and keep the best skills for your work](skill-arena/README.md). Skill Arena groups overlapping skills by job, tests real outputs, and keeps a smaller portfolio when the evidence supports it. Includes reversible consolidation and saved comparison history. [MIT license](skill-arena/LICENSE) · [Evaluation and limits](skill-arena/EVALUATION.md).
