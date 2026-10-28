@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
+<title id="title">UICBINS — UI Can't Believe It's Not Slop</title>
+<desc id="desc">Make it distinct. Make it work. An editorial poster for the UICBINS design and verification workflow; not a generated-site screenshot.</desc>
+<rect width="1440" height="620" fill="#f4efdf"/>
+<path d="M40 84H1400M40 552H1400M920 84V552" stroke="#22251f" stroke-width="2"/>
+<g fill="#22251f" font-family="Arial, Helvetica, sans-serif">
+<text x="42" y="53" font-size="20" font-weight="700" letter-spacing="3">UICBINS / 6.4.6</text>
+<text x="1396" y="53" text-anchor="end" font-size="17" letter-spacing="2">DESIGN + BUILD + REVIEW</text>
+<text x="40" y="204" font-size="98" font-weight="900" letter-spacing="-5">UI CAN'T</text>
+<text x="40" y="310" font-size="98" font-weight="900" letter-spacing="-5">BELIEVE IT'S</text>
+</g>
+<rect x="36" y="337" width="836" height="124" fill="#e64b2f"/>
+<text x="50" y="435" fill="#22251f" font-family="Arial, Helvetica, sans-serif" font-size="108" font-weight="900" letter-spacing="-5">NOT SLOP.</text>
+<g font-family="Arial, Helvetica, sans-serif" fill="#22251f">
+<text x="44" y="511" font-size="24">Make it distinct. Make it work.</text>
+<text x="42" y="594" font-size="18" letter-spacing="2">ONE REQUEST. INTERNAL ITERATION.</text>
+<text x="1396" y="594" text-anchor="end" font-size="18" letter-spacing="2">A CONSIDERED HANDOFF.</text>
+</g>
+<g transform="translate(966 120)">
+<rect x="0" y="0" width="390" height="350" fill="#22251f"/>
+<rect x="17" y="17" width="356" height="316" fill="#f4efdf"/>
+<path d="M17 85H373M105 85V333" stroke="#22251f" stroke-width="2"/>
+<g fill="#22251f" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">
+<text x="37" y="60">THE WORK BEHIND THE UI</text>
+<text x="40" y="130">01</text><text x="127" y="130">DIRECTION</text>
+<text x="40" y="186">02</text><text x="127" y="186">INTERACTION</text>
+<text x="40" y="242">03</text><text x="127" y="242">INSPECTION</text>
+<text x="40" y="298">04</text><text x="127" y="298">REPAIR</text>
+</g>
+<path d="M17 149H373M17 205H373M17 261H373" stroke="#22251f"/>
+<circle cx="361" cy="344" r="52" fill="#e64b2f"/>
+<path d="m337 344 16 16 32-36" fill="none" stroke="#22251f" stroke-width="8"/>
+</g>
+</svg>
