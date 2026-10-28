@@ -1,10 +1,41 @@
-# UICBINS
+<p align="center">
+  <img src="assets/uicbins-cover.svg" alt="UI Can't Believe It's Not Slop. Make it distinct. Make it work." width="100%">
+</p>
 
-**UI Can't Believe It's Not Slop** — a compact workflow for building and reviewing distinctive, usable web interfaces.
+<h1 align="center">UI Can't Believe It's Not Slop</h1>
 
-One request includes a brief and component blueprint, implementation, functional checks, an adversarial design review, and final verification. “One-shot” means one user handoff with internal iteration; it does not mean accepting the first generated page.
+<p align="center"><strong>Give your interface a point of view.<br>Then make every interaction earn its place.</strong></p>
 
-Supply a reference website URL to adapt its layout, typography and interactions to your own brief. This standalone release includes the full workflow and works without Pro.
+<p align="center">A standalone design-and-build skill for coding agents.<br>Art direction, complete interactions, browser inspection, review and repair.</p>
+
+<p align="center"><a href="#install-from-this-repository">Install</a> · <a href="#try-it">Try it</a> · <a href="#top-tier-design-tested-beyond-screenshots">Results</a> · <a href="../../skills/uicbins/SKILL.md">Read the skill</a></p>
+
+---
+
+## A first draft is a starting point.
+
+A page can look finished while the form forgets your edits, the phone layout clips a heading, or keyboard focus disappears. UICBINS asks your agent to carry the work through those details: choose a visual direction, build a complete slice, inspect it in the browser, challenge the result, and repair what fails.
+
+**One request. Internal iteration. One considered handoff.** “One-shot” means one user handoff after planning, building, checks and review—not accepting the first generated page.
+
+Use it for landing pages, product interfaces, dashboards, redesigns and motion polish. Bring a brief, an existing project, or a reference website URL. The standalone release includes the full workflow; Pro is optional additional guidance, not a feature unlock.
+
+## Design with intent. Verify the details.
+
+| Work | What UICBINS brings |
+| --- | --- |
+| **Choose a direction** | A concrete approach to type, colour, composition, imagery and purposeful motion, grounded in your brief. |
+| **Build the journey** | Components and interactions planned through valid, invalid, edit, cancel and post-success states. |
+| **Inspect the result** | Browser checks for rendered text, overflow, focus, forms, motion and relevant accessibility concerns. |
+| **Challenge and repair** | Adversarial review, scoped fixes and final checks against the delivered files. |
+
+The package includes a direction library, reference guides and runnable inspection helpers. It guides the agent's process; actual execution depends on the tools available in your host.
+
+## Bring a reference. Keep your identity.
+
+Supply a live website URL and a clear brief. UICBINS inspects the reference's layout, hierarchy, typography and interaction patterns, then adapts the relevant ideas to your content and brand.
+
+The URL module needs an accessible website; a screenshot alone does not activate it. It reports inaccessible references as a limitation. Reference inspection does not grant permission to reuse another site's branding or assets.
 
 ## Top-tier design. Tested beyond screenshots.
 
@@ -30,21 +61,45 @@ For a personal installation, Codex also uses `$CODEX_HOME/skills` (normally `~/.
 
 ## Try it
 
+### Build something distinctive
+
 ```text
 Use $uicbins to build a responsive landing page for my studio.
-Our primary action is requesting a consultation. Use the supplied copy
-and keep the booking flow a clearly labelled local demo until an endpoint
-is provided. Include keyboard access and reduced-motion behaviour.
+Our primary action is requesting a consultation. Use the supplied copy.
+Choose a coherent visual direction and carry it through the full page.
+Keep booking a clearly labelled local demo until I supply an endpoint.
+Check phone and desktop layouts, keyboard access and reduced motion.
 ```
 
-For a reference-led build, add:
+### Adapt a website to your product
 
 ```text
-Use https://example.com as the reference website. Adapt its hierarchy
-and interaction patterns to this brief while keeping our content and brand.
+Use $uicbins to adapt https://example.com to the attached product brief.
+Inspect its hierarchy, typography and interaction patterns.
+Keep our content and brand; do not copy its claims or assets.
+Build and check the main user journey, including edit and error states.
 ```
 
-Replace the example URL with your actual reference. Screenshot-only input is not accepted by the live-reference module. The agent may capture the site itself as evidence. An inaccessible site is reported as a limitation, not reconstructed from guesses.
+Replace the example URL with your actual reference.
+
+### Refine an existing interface
+
+```text
+Use $uicbins to refine this interface.
+Preserve the accepted brand direction and existing functionality.
+Inspect the rendered result, identify the highest-impact visual and
+interaction problems, repair them, and rerun the affected checks.
+```
+
+### Get a review without edits
+
+```text
+Use $uicbins in REVIEW mode on this interface.
+Check composition, content truth, responsive layout and the main journey.
+Report observed problems and concrete closure checks. Do not edit files.
+```
+
+For direction before implementation, request **PLAN** mode. It ends with a buildable direction; **BUILD** includes repairs, **REFINE** revisits the affected decisions, and **REVIEW** reports without editing.
 
 ## Requirements and boundaries
 
@@ -58,4 +113,10 @@ Release validation checks package structure separately from generated-site behav
 
 ## Licence and attribution
 
-Original material: MIT, copyright 2026 Ledio Zefi. Preserve the included licence and notices. Third-party assets and runtime libraries retain their own terms. UICBINS-Pro is a separate package and is not included in this standalone distribution.
+Original material: [MIT](../../skills/uicbins/LICENSE), copyright 2026 Ledio Zefi. Preserve the included [attribution](../../skills/uicbins/NOTICE.md) and [third-party notices](../../skills/uicbins/THIRD-PARTY-NOTICES.md). Third-party assets and runtime libraries retain their own terms. UICBINS-Pro is a separate package and is not included in this standalone distribution.
+
+---
+
+**Make the direction deliberate. Make the result usable.**
+
+[Install UICBINS](#install-from-this-repository) · [Read the source](../../skills/uicbins/SKILL.md) · [Explore the collection](../../README.md)

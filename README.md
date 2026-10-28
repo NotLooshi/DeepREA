@@ -2,6 +2,10 @@
 
 ## UICBINS 6.4.6
 
+[![UI Can't Believe It's Not Slop — Make it distinct. Make it work.](docs/uicbins/assets/uicbins-cover.svg)](docs/uicbins/README.md)
+
+**Give your interface a point of view. Then make every interaction earn its place.**
+
 [UI Can't Believe It's Not Slop](docs/uicbins/README.md): a standalone workflow for distinctive web interfaces, complete interactions, URL-based reference adaptation and internal design/functional review. [Skill](skills/uicbins/SKILL.md) · [Installation](docs/uicbins/README.md#install-from-this-repository) · [Evaluation and limits](docs/uicbins/EVALUATION.md) · [MIT licence](skills/uicbins/LICENSE).
 
 **Top-tier design. Tested beyond screenshots.** An anonymous review of our five-skill landing-page comparison placed UICBINS alongside Impeccable and Emil in the top tier, ahead of Stitch and Taste on that brief. Separate UICBINS trials passed **27/27 landing-page checks** and **25/25 app checks** after review and repairs. One visual sample per skill; the app trial included coordinator QA. [Benchmark highlights and methodology](docs/uicbins/README.md#top-tier-design-tested-beyond-screenshots).
