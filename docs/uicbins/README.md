@@ -6,6 +6,20 @@ One request includes a brief and component blueprint, implementation, functional
 
 Supply a reference website URL to adapt its layout, typography and interactions to your own brief. This standalone release includes the full workflow and works without Pro.
 
+## Top-tier design. Tested beyond screenshots.
+
+In our five-skill comparison, an anonymous visual review placed **UICBINS alongside Impeccable and Emil in the top tier**, ahead of Stitch and Taste on the tested brief. The reviewer highlighted UICBINS's visual identity and offer comparison.
+
+| Trial | Observed result |
+|---|---|
+| Five-skill visual comparison | Joint top tier on the tested landing-page brief |
+| Separate UICBINS landing-page repeat | **27/27 checks passed** after internal review and repairs |
+| Fieldnotes reading-list app with live URL adaptation | **25/25 checks passed** after review and repairs, including coordinator QA |
+
+The competitive trial used the same brief, fresh contexts and **GPT-5.6-Terra at medium effort**. Each skill could use its normal internal workflow; time and token budgets were not fixed. Stitch means its design guidance, not the hosted service.
+
+These are separate results, not a combined win rate. All five original outputs passed the mechanical checks, and all still had review findings; UICBINS's first output had unsupported timing copy and mobile text over artwork. The visual ranking comes from one review of one sample per skill. The repaired repeat does not inherit that ranking, and no conversion uplift was measured. [Read the methodology, findings and limitations](EVALUATION.md).
+
 ## Install from this repository
 
 For a project-local Codex installation, copy the complete `skills/uicbins` folder to `<your-project>/.agents/skills/uicbins`, then start a new task in that project and invoke `$uicbins`. This route was exercised with a clean extraction and an explicit PLAN invocation in the local Codex CLI. The invocation loaded the expected package version and left the project unchanged.

@@ -4,6 +4,8 @@
 
 [UI Can't Believe It's Not Slop](docs/uicbins/README.md): a standalone workflow for distinctive web interfaces, complete interactions, URL-based reference adaptation and internal design/functional review. [Skill](skills/uicbins/SKILL.md) · [Installation](docs/uicbins/README.md#install-from-this-repository) · [Evaluation and limits](docs/uicbins/EVALUATION.md) · [MIT licence](skills/uicbins/LICENSE).
 
+**Top-tier design. Tested beyond screenshots.** An anonymous review of our five-skill landing-page comparison placed UICBINS alongside Impeccable and Emil in the top tier, ahead of Stitch and Taste on that brief. Separate UICBINS trials passed **27/27 landing-page checks** and **25/25 app checks** after review and repairs. One visual sample per skill; the app trial included coordinator QA. [Benchmark highlights and methodology](docs/uicbins/README.md#top-tier-design-tested-beyond-screenshots).
+
 ## Skill Arena
 
 [Discover, benchmark and keep the best skills for your work](skill-arena/README.md). Skill Arena groups overlapping skills by job, tests real outputs, and keeps a smaller portfolio when the evidence supports it. Includes reversible consolidation and saved comparison history. [MIT license](skill-arena/LICENSE) · [Evaluation and limits](skill-arena/EVALUATION.md).
